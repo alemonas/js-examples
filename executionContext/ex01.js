@@ -3,6 +3,9 @@ function printMoney() {
 }
 
 function findMoney() {
+  function a() {
+      
+  }
   return printMoney();
 }
 
