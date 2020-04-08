@@ -14,7 +14,7 @@ function removeLastItem(arr) {
 const removeLastItemArray = removeLastItem(array);
 
 console.log('array:', array)
-console.log('removeLastItemArray: ', removeLastItem);
+console.log('removeLastItemArray: ', removeLastItemArray);
 
 function multiplyBy2(arr) {
   return arr.map(item => item * 2);

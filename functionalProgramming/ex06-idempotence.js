@@ -2,7 +2,7 @@
 // Always returns or does what we expected to do
 
 function idempotence(num) {
-  Math.random(num);
+  return Math.random(num);
 }
 
 console.log(idempotence(5));

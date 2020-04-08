@@ -4,10 +4,10 @@
 // param at a time
 
 const multiply = (a, b) => a * b;
-multiply(10,4)
+console.log(multiply(10,4))
 
 const curriedMultiply = (a) => (b) => a*b;
-curriedMultiply(5)(3) 
+console.log(curriedMultiply(5)(3)) 
 
 // we could do something like:
 const curriedMultiplyBy5 = curriedMultiply(5);

@@ -19,10 +19,10 @@ const closureImpure = function() {
 }
 
 const incrementFn = closureImpure();
-incrementFn();
-incrementFn();
-incrementFn();
-incrementFn();
+console.log(incrementFn());
+console.log(incrementFn());
+console.log(incrementFn());
+console.log(incrementFn());
 
 const closurePure = function() {
   let counter = 1024;
