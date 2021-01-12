@@ -5,6 +5,8 @@ const user = {
   purchases: []
 }
 
+const amazonHistory = [];
+
 const compose = (f, g) => (...args) => f(g(...args))
 const pipe = (f, g) => (...args) => g(f(...args))
 const purchaseItem  = (...fns) => fns.reduce(compose);
@@ -19,11 +21,13 @@ const res = purchaseItem(
 console.log(res);
 
 function addItemToCart(user, item) {
+  amazonHistory.push(user)
   const updatedCart = user.cart.concat(item)
   return Object.assign({}, user, {cart: updatedCart});
 }
 
 function applyTaxToItems(user) {
+  amazonHistory.push(user)
   const {cart} = user;
   const taxRate = 1.3;
   const updatedCart = cart.map(item => {
@@ -36,9 +40,13 @@ function applyTaxToItems(user) {
 }
 
 function buyItem(user) {
+  amazonHistory.push(user)
   const itemsInCart = user.cart;
   return Object.assign({}, user, { purchases: itemsInCart });
 }
 function emptyUserCart(user) {
+  amazonHistory.push(user)
   return Object.assign({}, user, { cart: [] });
 }
+
+// other features could be: refundItem, getUserState, goBack, goForward

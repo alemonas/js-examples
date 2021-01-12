@@ -17,7 +17,7 @@ let cache = {}; // using hashmap
 function memoizedAddTo80(n) {
   if (n in cache) {
     return cache[n];
-  }SILAS
+  }
 
   console.log('after long time...');
   cache[n] = n + 80;
